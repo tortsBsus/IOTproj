@@ -1,8 +1,10 @@
 import React from 'react'
-
+import './components-css/Footer.css'
 function Footer() {
   return (
-    <div>Footer</div>
+    <div className='footer'>
+      © 2023 IOT Project
+      </div>
   )
 }
 
