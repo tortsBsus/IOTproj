@@ -1,0 +1,23 @@
+.navbar
+{
+    position: sticky;
+	display: flex;
+    padding: 2vw;;
+	justify-content: space-between;
+    background-color:#041f24;
+	align-items: center;
+	height: 60px;
+	top: 0;
+}
+.link
+{
+    
+    text-decoration:none;
+    color: white;
+    margin: 1vw;
+}
+.linkGroup
+{
+    display: flex;
+    flex-flow: row;
+}

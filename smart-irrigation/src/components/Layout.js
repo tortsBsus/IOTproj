@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 function Layout() {
   return (
-    <div >
+    <div>
         <Navbar/>
                 
         <Outlet/>
