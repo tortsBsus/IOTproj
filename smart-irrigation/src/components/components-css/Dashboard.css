@@ -1,161 +1,148 @@
+.container
+{
+    display:grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "soilGraph soilGraph TV TV" "WSB WSB waterGraph waterGraph" ;
+    justify-items: stretch;
+    align-items: stretch;
+
+}
+
+/* mobile view */
+@media screen and (min-width:250px) and (max-width:480px) {
+    .container{
+      grid-template-columns: repeat(1,1fr);
+      grid-template-areas: "soilGraph" "TV" "waterGraph" "WSB";
+    }
+  }
+
+   /* Tablet View */
+   @media screen and (min-width:481px) and (max-width:768px) {
+    .container{
+      grid-template-columns: repeat(2,1fr);
+      grid-template-areas: "soilGraph TV" "WSB waterGraph" ;
+      
+    }
+  }
+   /* Laptop View */
+   @media screen and (min-width:769px) and (max-width:1024px) {
+    .container{
+      grid-template-columns: repeat(4,1fr);
+    }
+  }
+
+
+  .soilGraph
+  {
+    grid-area: soilGraph;
+  }
+  .waterGraph
+  {
+    grid-area: waterGraph;
+  }
+
 h1{
- color: #58b226;
- 
-}
-.background
-{
-    height:100vh;
-    /* border:1px solid #031518; */
-    background-color:#07343c;
-    padding:15px;
-    color:#feffff;
-}
-.display{
-    background-color:#041c20;
-    height:80%;
-    /* border:2px solid #395d63; */
-    padding:1%;
-    display: flex;
-    flex-flow: row;
-    align-items: stretch;
-}
-.Section1{
-    background-color:#07343c;
-    width:50%;
-    margin:1%;
-    padding:1%;
-    /* border:1px solid #010a0c; */
-    display: flex;
-    flex-flow: column;
+    color: #58b226;
     
-
-}
-.Section2{
-    background-color:#07343c;
-    width:50%;
-    margin:1%;
-    padding:1%;
-    /* border:1px solid #395d63; */
-    display: flex;
-    flex-flow: column;
-    align-items: stretch;
-    justify-content:center;
+   }
+   .background
+   {
+       min-height:100vh;
+       background-color:#07343c;
+       padding:15px;
+       color:#feffff;
+   }
 
     
-}
- .SMG{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-around;
-    flex-grow: 2;
-    margin:1%;
-    /* border:1px solid #031518; */
-
- }
-
-.soilGraph
-{
-    width: 70%;
-    height:70%;
-}
-.waterGraph
-{
-    width: 80%;
-    height:100%;
-}
-
- .TV{
-    display: flex;
-    flex-flow: row;
-    align-items: stretch;
-    justify-content: center;
-    margin:1%;
-    padding:1%;
-    /* border:1px solid #031518; */
-
- }
- .Temp{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content:center;
-    margin:1%;
-    padding:1%;
-    /* border:1px solid #010a0c; */
-
- }
- .Humidity{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content:center;
-    margin:1%;
-    padding:1%;
-    /* border:1px solid #010a0c; */
-
- }
- .Rain{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content:center;
-    margin:1%;
-    padding:1%;
-    /* border:1px solid #010a0c; */
-
- }
- 
- .WCG{
-    
-    
-    display: flex;
-    flex-flow: column;
-    flex-grow: 3;
-    align-items: center;
-    margin:1%;
-    /* border:1px solid #031518; */
-
- }
- .WSB{
-    background-color:#041c20;
-    display: flex;
-    flex-flow: column;
-    flex-grow: 1;
-    align-items: center;
-    justify-content:center;
-    margin:1%;
-    padding:1%;
-    /* border:1px solid #031518; */
-
- }
- .WS{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content:center;
-    margin:1%;
-    padding:1%;
-    /* border:1px solid #010a0c; */
- }
-.Irrigate
-{
-    margin:1% 1% 0% 1%;
-    padding:1%;
-    /* border:1px solid #010a0c; */
-}
+   
+  
+   
+    .TV{
+        grid-area: TV;
+       display: flex;
+       flex-flow: row;
+       align-items: stretch;
+       justify-content: center;
+       margin:1%;
+       padding:1%;
+       /* border:1px solid #031518; */
+   
+    }
+    .Temp{
+       display: flex;
+       flex-flow: column;
+       align-items: center;
+       justify-content:center;
+       margin:1%;
+       padding:1%;
+       /* border:1px solid #010a0c; */
+   
+    }
+    .Humidity{
+       display: flex;
+       flex-flow: column;
+       align-items: center;
+       justify-content:center;
+       margin:1%;
+       padding:1%;
+       /* border:1px solid #010a0c; */
+   
+    }
+    .Rain{
+       display: flex;
+       flex-flow: column;
+       align-items: center;
+       justify-content:center;
+       margin:1%;
+       padding:1%;
+       /* border:1px solid #010a0c; */
+   
+    }
+  
+    .WSB{
+        grid-area: WSB;
+       background-color:#041c20;
+       display: flex;
+       flex-flow: column;
+       flex-grow: 1;
+       align-items: center;
+       justify-content:center;
+       margin:1%;
+       padding:1%;
+       /* border:1px solid #031518; */
+   
+    }
+    .WS{
+       display: flex;
+       flex-flow: column;
+       align-items: center;
+       justify-content:center;
+       margin:1%;
+       padding:1%;
+       /* border:1px solid #010a0c; */
+    }
+   
+   .Irrigate
+   {
+       margin:1% 1% 0% 1%;
+       padding:1%;
+       /* border:1px solid #010a0c; */
+   }
+   
+   
+   /* 
+   black: {
+       100: "#010a0c",
+       200: "#9caeb1",
+       300: "#6a858a",
+       400: "#395d63",
+       500: "#07343c",
+       600: "#062a30",
+       700: "#041f24",
+       800: "#031518",
+       900: "#010a0c"
+   },
+   */
 
 
-/* 
-black: {
-    100: "#010a0c",
-    200: "#9caeb1",
-    300: "#6a858a",
-    400: "#395d63",
-    500: "#07343c",
-    600: "#062a30",
-    700: "#041f24",
-    800: "#031518",
-    900: "#010a0c"
-},
-*/
